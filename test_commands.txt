@@ -1,0 +1,34 @@
+# Individual Test Commands for Clinical Decision Support System
+# =============================================================
+
+# 1. Start Server
+# ---------------
+C:\Users\Babu\Documents\WORKAREA\pdpcds-project\.venv\Scripts\python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
+
+# 2. Test Prediction API
+# ----------------------
+$testData = Get-Content "test_data_default.json" -Raw; Invoke-WebRequest -Uri "http://127.0.0.1:8000/api/v1/predict/" -Method POST -ContentType "application/json" -Body $testData
+
+# 3. Test Doctor Feedback - Correct Prediction
+# --------------------------------------------
+$feedbackCorrect = Get-Content "test_feedback_positive.json" -Raw; Invoke-WebRequest -Uri "http://127.0.0.1:8000/api/v1/feedback/prediction-feedback" -Method POST -ContentType "application/json" -Body $feedbackCorrect
+
+# 4. Test Doctor Feedback - Incorrect Prediction  
+# -----------------------------------------------
+$feedbackIncorrect = Get-Content "test_feedback_negative.json" -Raw; Invoke-WebRequest -Uri "http://127.0.0.1:8000/api/v1/feedback/prediction-feedback" -Method POST -ContentType "application/json" -Body $feedbackIncorrect
+
+# 5. Test Minimal Feedback
+# ------------------------
+$feedbackMinimal = Get-Content "test_feedback_minimal.json" -Raw; Invoke-WebRequest -Uri "http://127.0.0.1:8000/api/v1/feedback/prediction-feedback" -Method POST -ContentType "application/json" -Body $feedbackMinimal
+
+# 6. Get Performance Statistics
+# -----------------------------
+Invoke-WebRequest -Uri "http://127.0.0.1:8000/api/v1/feedback/feedback-stats" -Method GET
+
+# 7. Health Check
+# ---------------
+Invoke-WebRequest -Uri "http://127.0.0.1:8000/health" -Method GET
+
+# 8. API Documentation
+# --------------------
+# Browser: http://127.0.0.1:8000/docs

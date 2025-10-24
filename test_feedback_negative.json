@@ -1,0 +1,14 @@
+{
+  "prediction_id": 2,
+  "doctor_id": "DR002",
+  "doctor_name": "Dr. Michael Chen",
+  "hospital_unit": "Internal Medicine",
+  "prediction_accurate": false,
+  "confidence_in_feedback": 0.88,
+  "actual_disease_id": 123,
+  "actual_condition_name": "Kidney Stone",
+  "ordered_tests": ["ct_scan", "urinalysis", "blood_chemistry"],
+  "prescribed_medications": ["pain_medication", "anti_inflammatory", "hydration_therapy"],
+  "clinical_notes": "Initial prediction suggested back strain, but CT scan revealed 4mm kidney stone in right ureter. Patient's pain pattern and urinalysis confirmed diagnosis.",
+  "outcome_notes": "Stone passed naturally after 3 days with conservative management. Patient fully recovered."
+}

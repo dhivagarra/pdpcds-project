@@ -1,0 +1,14 @@
+{
+  "age": 42,
+  "sex": "male",
+  "vital_temperature_c": 36.5,
+  "vital_heart_rate": 78,
+  "vital_blood_pressure_systolic": 130,
+  "vital_blood_pressure_diastolic": 85,
+  "symptom_list": ["back pain", "muscle stiffness"],
+  "pmh_list": ["type 2 diabetes", "hypertension"],
+  "current_medications": ["metformin", "lisinopril"],
+  "allergies": ["penicillin"],
+  "chief_complaint": "Lower back pain after lifting heavy boxes",
+  "free_text_notes": "42-year-old male with diabetes and hypertension presenting with acute lower back pain after lifting heavy objects at work. No radiating pain, no neurological symptoms. Pain is worse with movement."
+}

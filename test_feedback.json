@@ -1,0 +1,14 @@
+{
+  "prediction_id": 1,
+  "doctor_id": "DR001",
+  "doctor_name": "Dr. John Smith",
+  "prediction_accurate": true,
+  "confidence_in_feedback": 0.95,
+  "actual_disease_id": null,
+  "actual_condition_name": null,
+  "ordered_tests": ["blood_test", "x_ray"],
+  "prescribed_medications": ["ibuprofen", "physical_therapy"],
+  "clinical_notes": "Patient responded well to initial treatment for back pain",
+  "outcome_notes": "Improvement seen after 3 days",
+  "hospital_unit": "Emergency Department"
+}

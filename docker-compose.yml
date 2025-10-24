@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15
+    container_name: pdpcds_postgres
+    environment:
+      POSTGRES_DB: pdpcds_db
+      POSTGRES_USER: pdpcds_user
+      POSTGRES_PASSWORD: pdpcds_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./data/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - pdpcds_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pdpcds_user -d pdpcds_db"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  # FastAPI Application
+  api:
+    build: .
+    container_name: pdpcds_api
+    environment:
+      - DATABASE_URL=postgresql://pdpcds_user:pdpcds_password@postgres:5432/pdpcds_db
+      - DEBUG=True
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app/app
+      - ./models:/app/models
+      - ./data:/app/data
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - pdpcds_network
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+  # pgAdmin for database management (optional)
+  pgadmin:
+    image: dpage/pgadmin4:7
+    container_name: pdpcds_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@pdpcds.com
+      PGADMIN_DEFAULT_PASSWORD: admin123
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+    networks:
+      - pdpcds_network
+
+volumes:
+  postgres_data:
+
+networks:
+  pdpcds_network:
+    driver: bridge

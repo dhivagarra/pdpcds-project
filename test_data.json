@@ -1,0 +1,11 @@
+{
+  "age": 35,
+  "sex": "male", 
+  "vital_temperature_c": 38.5,
+  "vital_heart_rate": 95,
+  "vital_blood_pressure_systolic": 140,
+  "vital_blood_pressure_diastolic": 85,
+  "symptom_list": ["fever", "headache", "nausea"],
+  "pmh_list": ["hypertension"],
+  "free_text_notes": "Patient reports flu-like symptoms for 2 days"
+}

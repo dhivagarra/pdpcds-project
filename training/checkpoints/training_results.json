@@ -1,0 +1,51 @@
+{
+  "config": {
+    "input_size": 106,
+    "hidden_size": 512,
+    "dropout_rate": 0.3,
+    "num_diseases": 59,
+    "num_tests": 25,
+    "num_medications": 18,
+    "batch_size": 16,
+    "learning_rate": 0.001,
+    "weight_decay": 1e-05,
+    "num_epochs": 3,
+    "disease_weight": 1.0,
+    "test_weight": 0.5,
+    "med_weight": 0.5,
+    "scheduler_step": 10,
+    "scheduler_gamma": 0.8,
+    "patience": 10,
+    "data_dir": "./training/data",
+    "model_dir": "./models",
+    "checkpoint_dir": "./training/checkpoints"
+  },
+  "history": {
+    "train_loss": [
+      2.170120276212692,
+      1.483319147825241,
+      1.4063623571395873
+    ],
+    "val_loss": [
+      1.3256307291984557,
+      1.2583732390403748,
+      1.2538193273544311
+    ],
+    "train_acc": [
+      0.54,
+      0.610625,
+      0.63875
+    ],
+    "val_acc": [
+      0.6575,
+      0.6625,
+      0.6675
+    ],
+    "learning_rates": [
+      0.001,
+      0.001,
+      0.001
+    ]
+  },
+  "timestamp": "2025-10-17T19:55:06.499465"
+}

@@ -1,0 +1,14 @@
+{
+  "age": 54,
+  "sex": "female",
+  "vital_temperature_c": 38.5,
+  "vital_heart_rate": 110,
+  "vital_blood_pressure_systolic": 140,
+  "vital_blood_pressure_diastolic": 85,
+  "symptom_list": ["fever", "productive cough", "fatigue", "shortness of breath"],
+  "pmh_list": ["hypertension", "diabetes type 2"],
+  "current_medications": ["lisinopril", "metformin"],
+  "allergies": ["penicillin"],
+  "chief_complaint": "Cough and fever for 3 days",
+  "free_text_notes": "Patient reports 3 days of worsening cough with yellow sputum, fever up to 38.5°C, and increasing shortness of breath with exertion. No chest pain. Has history of hypertension and diabetes."
+}

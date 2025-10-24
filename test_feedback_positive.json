@@ -1,0 +1,14 @@
+{
+  "prediction_id": 1,
+  "doctor_id": "DR001",
+  "doctor_name": "Dr. Sarah Johnson",
+  "hospital_unit": "Emergency Department",
+  "prediction_accurate": true,
+  "confidence_in_feedback": 0.95,
+  "actual_disease_id": null,
+  "actual_condition_name": null,
+  "ordered_tests": ["mri_scan", "blood_test", "x_ray"],
+  "prescribed_medications": ["ibuprofen", "muscle_relaxant", "physical_therapy"],
+  "clinical_notes": "Patient responded well to initial treatment. MRI confirmed muscle strain without disc involvement. No signs of nerve compression.",
+  "outcome_notes": "Patient showed significant improvement after 48 hours. Able to walk without severe pain. Recommended follow-up in 1 week."
+}

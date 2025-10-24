@@ -1,0 +1,14 @@
+{
+  "age": 28,
+  "sex": "male",
+  "vital_temperature_c": 37.8,
+  "vital_heart_rate": 85,
+  "vital_blood_pressure_systolic": 120,
+  "vital_blood_pressure_diastolic": 80,
+  "symptom_list": ["fever", "chills", "body aches"],
+  "pmh_list": [],
+  "current_medications": [],
+  "allergies": ["sulfa"],
+  "chief_complaint": "Fever and chills since yesterday",
+  "free_text_notes": "Previously healthy 28-year-old male presenting with acute onset fever and chills. No respiratory symptoms, no recent travel. Feels generally unwell with body aches."
+}

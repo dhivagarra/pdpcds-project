@@ -1,0 +1,14 @@
+{
+  "age": 35,
+  "sex": "female",
+  "vital_temperature_c": 36.8,
+  "vital_heart_rate": 72,
+  "vital_blood_pressure_systolic": 115,
+  "vital_blood_pressure_diastolic": 75,
+  "symptom_list": ["headache", "nausea", "sensitivity to light"],
+  "pmh_list": ["migraine history"],
+  "current_medications": ["ibuprofen as needed"],
+  "allergies": [],
+  "chief_complaint": "Severe headache with nausea for 6 hours",
+  "free_text_notes": "Patient has history of migraines, current headache started this morning and is more severe than usual. Associated with nausea and photophobia. No fever or neck stiffness."
+}

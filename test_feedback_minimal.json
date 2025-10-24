@@ -1,0 +1,14 @@
+{
+  "prediction_id": 3,
+  "doctor_id": "DR003",
+  "doctor_name": "Dr. Lisa Rodriguez",
+  "hospital_unit": "Orthopedics",
+  "prediction_accurate": true,
+  "confidence_in_feedback": 0.92,
+  "actual_disease_id": null,
+  "actual_condition_name": null,
+  "ordered_tests": ["mri_lumbar_spine"],
+  "prescribed_medications": ["nsaid", "physical_therapy"],
+  "clinical_notes": "System correctly identified lumbar strain. Patient has classic presentation of mechanical back pain with muscle spasm.",
+  "outcome_notes": "Excellent response to conservative treatment. Patient returned to work after 5 days."
+}

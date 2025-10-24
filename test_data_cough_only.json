@@ -1,0 +1,14 @@
+{
+  "age": 67,
+  "sex": "female",
+  "vital_temperature_c": 38.2,
+  "vital_heart_rate": 95,
+  "vital_blood_pressure_systolic": 140,
+  "vital_blood_pressure_diastolic": 90,
+  "symptom_list": ["cough", "difficulty breathing", "chest tightness"],
+  "pmh_list": ["COPD", "smoking history"],
+  "current_medications": ["albuterol inhaler", "prednisone"],
+  "allergies": ["latex"],
+  "chief_complaint": "Worsening cough and shortness of breath for 3 days",
+  "free_text_notes": "67-year-old female with COPD presenting with acute exacerbation. Productive cough with yellow sputum, increased dyspnea on exertion. Currently using rescue inhaler more frequently than usual."
+}

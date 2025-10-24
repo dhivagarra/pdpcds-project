@@ -1,0 +1,12 @@
+{
+  "prediction_id": 1,
+  "doctor_id": "DR001",
+  "doctor_name": "Dr. Sarah Johnson",
+  "hospital_unit": "Emergency Department", 
+  "prediction_accurate": true,
+  "confidence_in_feedback": 0.95,
+  "ordered_tests": ["mri_scan", "blood_test"],
+  "prescribed_medications": ["ibuprofen", "muscle_relaxant"],
+  "clinical_notes": "Patient responded well to treatment for back pain. MRI confirmed muscle strain.",
+  "outcome_notes": "Significant improvement after 48 hours."
+}
