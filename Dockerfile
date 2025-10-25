@@ -9,6 +9,7 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y \
     gcc \
     g++ \
+    curl \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements first for better caching
@@ -20,6 +21,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application code
 COPY . .
 
+# Copy SQLite database into container
+COPY pdpcds_dev.db /app/pdpcds_dev.db
+
 # Create necessary directories
 RUN mkdir -p models data logs
 
@@ -27,6 +31,8 @@ RUN mkdir -p models data logs
 ENV PYTHONPATH=/app
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
+# <-- Important for SQLAlchemy
+ENV DATABASE_URL=sqlite:///app/pdpcds_dev.db
 
 # Expose port
 EXPOSE 8000
@@ -37,3 +43,4 @@ HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
 
 # Run the application
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+
